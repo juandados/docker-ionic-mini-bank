@@ -3,11 +3,10 @@ version: '3'
 services:
   web:
     build: . 
-    image: basic-ionic
+    image: docker-ionic
     env_file: .env
+    command: ionic serve
     volumes:
-      - .:/ionic-app
-    working_dir: /ionic-app
-    entrypoint: /ionic-app/entrypoint.sh 
+      - .:/ionic-project
     ports:
       - 8100:8100
