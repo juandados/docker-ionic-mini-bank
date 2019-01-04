@@ -3,10 +3,26 @@ version: '3'
 services:
   web:
     build: . 
-    image: docker-ionic
+    image: ionic
     env_file: .env
-    command: ionic serve
+    command: ["/usr/local/bin/ionic", "serve", "--no-open"]
     volumes:
       - .:/ionic-project
+    working_dir: /ionic-project/myApp
     ports:
       - 8100:8100
+
+  debug:
+    build: . 
+    image: ionic
+    privileged: true
+    network_mode: host
+    env_file: .env
+    command: ["/usr/local/bin/ionic", "cordova", "run", "android", "--livereload", "--consolelogs"]
+    volumes:
+      - .:/ionic-project
+      - /dev/bus/usb:/dev/bus/usb
+    working_dir: /ionic-project/myApp
+    ports:
+      - 8100:8100
+      - 35729:35729
