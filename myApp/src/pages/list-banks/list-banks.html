@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>list-banks</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-grid>
+    <ion-row *ngFor="let bank of bankList">
+        <ion-col>{{bank.date_created}}</ion-col>
+        <ion-col>{{bank.name}}</ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>

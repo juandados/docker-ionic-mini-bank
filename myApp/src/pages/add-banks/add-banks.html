@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>add-banks</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<h1>Ingresar Banco</h1>
+<ion-item>
+  <ion-label position="stacked">Nombre</ion-label>
+  <ion-input [(ngModel)]="banco_name"></ion-input>
+</ion-item>
+<button ion-button type="submit" block (click)="addBank()">Agregar</button>
+</ion-content>

@@ -5,7 +5,7 @@ services:
     build: . 
     image: ionic
     env_file: .env
-    command: ["/usr/local/bin/ionic", "serve", "--no-open"]
+    command: bash -c "npm install --rebuild && /usr/local/bin/ionic serve --no-open"
     volumes:
       - .:/ionic-project
     working_dir: /ionic-project/myApp
