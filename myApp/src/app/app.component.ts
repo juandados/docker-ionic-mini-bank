@@ -10,7 +10,7 @@ import { ListBanksPage } from '../pages/list-banks/list-banks';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ListBanksPage;
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

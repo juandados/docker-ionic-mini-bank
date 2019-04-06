@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: . 
-    image: ionic
+    image: mini-ionic
     env_file: .env
     command: bash -c "npm install --rebuild && /usr/local/bin/ionic serve --no-open"
     volumes:

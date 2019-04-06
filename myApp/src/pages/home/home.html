@@ -7,5 +7,6 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button full (click)="openCamera()">Open</button>
+  <button ion-button (click)="navCtrl.push(addBanksPage)">Create Bank</button>
+  <button ion-button (click)="navCtrl.push(listBanksPage)">List Banks</button>
 </ion-content>

@@ -1,4 +1,4 @@
-FROM node:8.11
+FROM node:8.15.1-jessie
 
 # Install java
 RUN apt-get update -q \
